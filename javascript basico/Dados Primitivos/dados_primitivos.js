@@ -1,4 +1,4 @@
-//String, number, undefined, null, boolean
+//String, number, undefined, null, boolean | São imutáveis
 const nome = 'Diogo'; //string
 const nome1 = "Diogo"; //string
 const nome2 = `Diogo`; //string 
