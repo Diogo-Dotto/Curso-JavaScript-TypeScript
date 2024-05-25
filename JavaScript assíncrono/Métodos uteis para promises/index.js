@@ -6,10 +6,13 @@ function rand(min, max) {
 
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
-        if(typeof msg !== 'string') reject('Bad Value')
-        
         setTimeout(() => {
-            resolve(msg); //exibido com then()
+            if(typeof msg !== 'string') {
+                reject('Bad Value');
+                return;
+            }
+
+            resolve(msg.toUpperCase() + ' - passei na promise'); //exibido com then()
         }, tempo);
     });
 }
@@ -22,10 +25,52 @@ Promise.reject
 */
 
 const promises = [
-    'Primeiro  valor',
-    esperaAi('Promise 1', 3000),
-    esperaAi('Promise 2', 500),
-    esperaAi('Promise 3', 1000),
-    'Outro valor'
+    esperaAi('Promise 1', rand(1, 4)),
+    esperaAi('Promise 2', rand(1, 4)),
+    esperaAi('Promise 3', rand(1, 4)),
+    //esperaAi(1000, rand(1, 4)),
 ];
 
+//Promise.all(promises) // tenta resolver todas as promises, se uma der errado rejeita todas
+//    .then(function(valor) {
+//        console.log(valor);
+//    })
+//    .catch(function(err) {
+//        console.log(err);
+//    })
+
+//Promise.race(promises) //resolve todos os promises, mas entrega a primeira a ser resolvida
+//    .then(valor => {
+//        console.log(valor);
+//    })
+//    .catch(err => {
+//        console.log(err);
+//    })
+
+//function baixaPagina() {
+//    const emCache = false;
+//
+//    if(emCache) {
+//        return Promise.resolve('pagina em cache'); //não precisa esperar resdolver, já tem os dados prontos 
+//    } else {
+//        return esperaAi('Baixei a pagina', 3000);
+//    }
+//}
+
+function baixaPagina() {
+    const emCache = true;
+ 
+    if(emCache) {
+        return Promise.reject('Pagina em cache'); // cai no catch
+    } else {
+        return esperaAi('Baixei a pagina', 3000);
+    }
+}
+
+baixaPagina()
+    .then(dadosPagina => {
+        console.log(dadosPagina);
+    })
+    .catch(err => {
+        console.log('ERRO', err)
+    });
