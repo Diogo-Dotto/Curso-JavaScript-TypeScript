@@ -1,0 +1,53 @@
+Não nomear pastar de projetos com acentos ou espaços nem nomes conhecidos
+
+Como instalar pacotes de terceiros via terminal com NPM:
+    Digite no terminal "npm install 'nome do pacote'"
+
+Pacote será instaldo em dependencies com um acento '^' o que indica que o pacote sera atualizado automaticamente quando lançado
+
+Travar a versão de um pacote:
+    "npm install 'nome do pacote' -E"
+
+Atualizar pacotes:
+    "npm update" (busca os pacotes que estão desatualizados e os atualiza)
+
+Dependencies são necessárias em produção ex.: 'react, axios'
+
+DevDependencies sãp necessárias apenas na fase de desenvolvimento ex.: 'webpack, bebel, jest'
+
+Mover pacotes de Dependencies para DevDependencies:
+    "npm install 'nome do pacote' --save-dev"
+
+Mover de DevDependencies para Dependencies:
+    "npm install 'nome do pacote' --save-prod"
+
+Instalar versão específica de um pacote:
+    "npm install 'nome do pacote'@versão"
+
+Explicando versões:
+    2.1.0
+    2 - major - quebra de compatibilidade com coisas de versões anteriores
+    1 - minor - recurso novo sem alterar a versão major
+    0 - patch - correção de bug 
+
+Quando tiver '^' na versão é possível alterar minor e patch
+
+Quando tiver '~' mexe somente na versão patch
+
+Instalar a ultima versão de um pacote:
+    "npm install 'nome do pacote'@'numero da versão.x"
+
+Desinstalar pacote:
+    "npm unistall 'nome do pacote'"
+
+Listar pacotes:
+    "npm ls"
+
+Ver ou não todas as dependencias de um pacote:
+    "npm ls --depth=(0/1)" - 0 não mostra e 1 mostra
+
+Como saber se um pacote está desatualizado:
+    "npm outdated"
+
+
+-- ~~ -- ~~ -- ~~ 
