@@ -3,7 +3,7 @@ Não nomear pastar de projetos com acentos ou espaços nem nomes conhecidos
 Como instalar pacotes de terceiros via terminal com NPM:
     Digite no terminal "npm install 'nome do pacote'"
 
-Pacote será instaldo em dependencies com um acento '^' o que indica que o pacote sera atualizado automaticamente quando lançado
+Pacote será instalado em dependencies com um acento '^' o que indica que o pacote sera atualizado automaticamente quando lançado
 
 Travar a versão de um pacote:
     "npm install 'nome do pacote' -E"
