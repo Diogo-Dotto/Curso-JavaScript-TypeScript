@@ -51,3 +51,14 @@ Como saber se um pacote está desatualizado:
 
 
 -- ~~ -- ~~ -- ~~ 
+
+
+Nodemon - ferramentra em dev dependencies que assiste o codigo do servidor e o atualiza em tempo real sem precisar reiniciar
+
+npm install nodemon --save-dev
+
+npx nodemon "nome do servidor.js"
+
+package.json - , "start": "nodemon" 
+
+npm start
