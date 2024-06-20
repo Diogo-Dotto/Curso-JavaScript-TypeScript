@@ -67,3 +67,8 @@ meu link acesso mongoDB: mongodb+srv://DiogoDotto:<password>@cluster0.tpvrqbf.mo
 
 usuario: DiogoDotto
 senha: DFD18102001@
+
+Pacote que gerencia arquivos pessoais que não são subidos na rede como senhas:
+	npm install dotenv
+
+Mongoose é um módulo de Node.js que fornece uma solução baseada em esquemas para modelar os dados da sua aplicação com MongoDB. Ele facilita a interação com o banco de dados MongoDB ao fornecer uma camada de abstração que permite definir esquemas, validar dados, realizar consultas complexas e muito mais.
