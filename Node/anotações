@@ -63,10 +63,8 @@ package.json - , "start": "nodemon"
 
 npm start
 
-meu link acesso mongoDB: mongodb+srv://DiogoDotto:<password>@cluster0.tpvrqbf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-usuario: DiogoDotto
-senha: DFD18102001@
+
 
 Pacote que gerencia arquivos pessoais que não são subidos na rede como senhas:
 	npm install dotenv
