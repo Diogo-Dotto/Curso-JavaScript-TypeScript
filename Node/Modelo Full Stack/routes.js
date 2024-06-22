@@ -5,6 +5,7 @@ const contatoController = require('./src/controllers//contatosController');
 
 // Rotas da home
 route.get('/', homeController.paginaInicial);
+
 route.post('/', homeController.trataPost);
 
 // Rotas de contato
