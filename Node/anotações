@@ -70,3 +70,10 @@ Pacote que gerencia arquivos pessoais que não são subidos na rede como senhas:
 	npm install dotenv
 
 Mongoose é um módulo de Node.js que fornece uma solução baseada em esquemas para modelar os dados da sua aplicação com MongoDB. Ele facilita a interação com o banco de dados MongoDB ao fornecer uma camada de abstração que permite definir esquemas, validar dados, realizar consultas complexas e muito mais.
+
+CSRF - Cross-Site Request Forgery (Falsificação de Solicitação Entre Sites)
+	npm install csurf
+
+Helmet - Helmet é um middleware de segurança para aplicações Node.js que ajuda a proteger aplicativos Express configurando vários cabeçalhos HTTP.
+	npm install helmet
+	

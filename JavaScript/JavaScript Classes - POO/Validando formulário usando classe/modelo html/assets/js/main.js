@@ -16,7 +16,7 @@ class ValidaFormulario {
         const camposValidos = this.isValid();
         const senhasValidas = this.senhaIsValid();
 
-        if(camposValidos && senhasValidas) {
+        if (camposValidos && senhasValidas) {
             alert('Formulário enviado');
             this.formulario.submit();
         }
@@ -28,13 +28,13 @@ class ValidaFormulario {
         const senha = this.formulario.querySelector('.senha');
         const repetirSenha = this.formulario.querySelector('.repetir-senha');
 
-        if(senha.value !== repetirSenha.value) {
+        if (senha.value !== repetirSenha.value) {
             valid = false;
             this.createError(senha, 'Campos senha e repetir senha precisam ser iguais.')
             this.createError(repetirSenha, 'SCampos senha e repetir senha precisam ser iguais.')
         }
 
-        if(senha.value.length < 6 || senha.value.length > 12) {
+        if (senha.value.length < 6 || senha.value.length > 12) {
             valid = false;
             this.createError(senha, 'Senha deve conter entre 6 e 12 caracteres')
         }
@@ -53,7 +53,7 @@ class ValidaFormulario {
             const label = campo.previousElementSibling.innerText;
 
             if (!campo.value) {
-                this.createError(campo, `Campo '${label}' não pode estra em branco`);
+                this.createError(campo, `Campo '${label}' não pode estar em branco`);
                 valid = false;
             }
 
