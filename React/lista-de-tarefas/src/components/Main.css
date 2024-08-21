@@ -32,7 +32,7 @@
     border: none;
     height: 40px;
     width: 40px;
-    background: #52db69;
+    background: #f04c64;
     color: #fff;
     display: flex;
     align-items: center;
@@ -73,4 +73,9 @@
 .tarefas li .delete {
     cursor: pointer;
     transition: all 0.3s;
+}
+
+.tarefas li span {
+    display: flex;
+    align-items: center;
 }
